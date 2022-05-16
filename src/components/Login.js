@@ -1,19 +1,16 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FormLogin from "./FormLogin";
 
 function Login() {
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container ">
+      <div className="row d-flex justify-content-center align-items-center" style={{minHeight:"100vh"}}>
         <Card
-          className="col-12 col-md-8"
+          className="col-12 col-md-8 myCard"
           style={{ backgroundColor: "#2F3237", color: "white" }}
         >
           <CardContent>

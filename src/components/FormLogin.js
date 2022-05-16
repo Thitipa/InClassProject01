@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Typography } from "@mui/material";
 import {
   Button,
   ModalHeader,
@@ -9,6 +10,7 @@ import {
   Input,
   Label,
 } from "reactstrap";
+import barcode from "../images/image2.png";
 
 class FormLogin extends Component {
   constructor(props) {
@@ -55,7 +57,7 @@ class FormLogin extends Component {
       <div className="row d-flex justify-content-end">
         <div className="col-7">
           <ModalBody>
-            <Form onSubmit={this.handleLogin} style={{color:"#C5C5C5"}}>
+            <Form onSubmit={this.handleLogin} style={{ color: "#C5C5C5" }}>
               <FormGroup>
                 <Label htmlFor="username">EMAIL OR PHONE NUMBER</Label>
                 <Input
@@ -73,17 +75,52 @@ class FormLogin extends Component {
                   name="password"
                   innerRef={(input) => (this.password = input)}
                 />
-                <a href="#" style={{textDecoration:"none",color:"#0095D2"}}>Forgot your password?</a>
+                <a
+                  href="#"
+                  style={{ textDecoration: "none", color: "#0095D2" }}
+                >
+                  Forgot your password?
+                </a>
               </FormGroup>
-              <Button type="submit" value="submit" color="primary" className='col-12'>
+              <Button
+                type="submit"
+                value="submit"
+                color="primary"
+                className="col-12"
+                style={{ backgroundColor: "#505CEA" }}
+              >
                 Login
               </Button>
-              <span style={{color:"#afb0b3"}}>Need an account? </span><a href="#" style={{textDecoration:"none",color:"#0095D2"}}>Register?</a>
+              <span style={{ color: "#afb0b3" }}>Need an account? </span>
+              <a href="#" style={{ textDecoration: "none", color: "#0095D2" }}>
+                Register?
+              </a>
             </Form>
           </ModalBody>
         </div>
-        <div className="col-5">
-            <p>Hellooooooooooooo-00000000ooooooo</p>
+        <div className="col-5 d-flex align-item-center flex-column">
+          <div
+            className="d-flex justify-content-center"
+            style={{ marginBottom: "20px" }}
+          >
+            <img src={barcode} alt="Barcode" width="200px" />
+          </div>
+          <p
+            style={{ fontSize: "30px" }}
+            gutterBottom
+            variant="h5"
+            component="div"
+            className=" d-flex justify-content-center"
+          >
+            Unable to Login?
+          </p>
+          <p
+            className="d-flex justify-content-center"
+            style={{ textAlign: "center" }}
+          >
+            Listen to some music, relax yourself, and take a deep breath until
+            you can remember your password.
+          </p>
         </div>
       </div>
     );
