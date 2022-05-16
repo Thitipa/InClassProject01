@@ -1,3 +1,10 @@
-body{
-  background-color: rgb(156, 165, 250);
+.App{
+  background-image: linear-gradient(rgb(88, 83, 247), rgb(222, 220, 255));
+  min-height: 100vh;
+}
+
+.myCard{
+  justify-items: center;
+  align-items: center;
+  
 }

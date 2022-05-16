@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Button,
   ModalHeader,
@@ -51,11 +52,10 @@ class FormLogin extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <ModalHeader>Login</ModalHeader>
+      <div className="row d-flex justify-content-end">
+        <div className="col-7">
           <ModalBody>
-            <Form onSubmit={this.handleLogin}>
+            <Form onSubmit={this.handleLogin} style={{color:"#C5C5C5"}}>
               <FormGroup>
                 <Label htmlFor="username">EMAIL OR PHONE NUMBER</Label>
                 <Input
@@ -81,6 +81,9 @@ class FormLogin extends Component {
               <span style={{color:"#afb0b3"}}>Need an account? </span><a href="#" style={{textDecoration:"none",color:"#0095D2"}}>Register?</a>
             </Form>
           </ModalBody>
+        </div>
+        <div className="col-5">
+            <p>Hellooooooooooooo-00000000ooooooo</p>
         </div>
       </div>
     );
