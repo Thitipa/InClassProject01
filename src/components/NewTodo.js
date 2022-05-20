@@ -1,9 +1,3 @@
-import {
-    ArrowRight,
-    ArrowRightAlt,
-    ArrowRightRounded,
-    ChevronRight,
-  } from "@mui/icons-material";
   import { Box, Fab, Stack, TextField, Typography } from "@mui/material";
   import React, { useState } from "react";
   import moment from "moment";
@@ -13,30 +7,20 @@ import {
     const [desc, setDesc] = useState("");
     return (
       <div>
-        <Typography variant="h6" gutterBottom>
-          Add new To-do
-          <ChevronRight 
-              aria-label="edit"
-              onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))} />
-        </Typography>
+        
         <div display="flex" gap={2}>
           <Stack gap={2} flex={1}>
             <TextField
               id="outlined-basic"
-              label="Title"
+              label=""
               variant="outlined"
               value={title}
               onChange={(event) => setTitle(event.target.value)}
             />
-            <TextField
-              id="outlined-basic"
-              label="Description"
-              variant="outlined"
-              minRows={3}
-              multiline
-              value={desc}
-              onChange={(event) => setDesc(event.target.value)}
-            />
+            <button
+              aria-label="edit"
+              style={{}}
+              onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))}>add!</button>
           </Stack>
           <Stack justifyContent="flex-end">
             {/* <Fab

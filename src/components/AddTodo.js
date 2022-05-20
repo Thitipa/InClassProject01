@@ -1,6 +1,6 @@
-  import { Card, Fab, Stack, TextField, Typography,Container } from "reactstrap"
+  import { Card,Container } from "reactstrap"
   import React, { useState } from "react";
-  import moment from "moment";
+  // import moment from "moment";
   import TodoItem from "./TodoItem";
   import NewTodo from "./NewTodo";
 const Todo = () => {
@@ -25,7 +25,7 @@ const Todo = () => {
       <Container>
         <Card minHeight="calc(100vh - 620px)" paddingY={4}>
           <NewTodo addTodo={addTodos} />
-          <div sx={{ marginY: 2 }} />
+          <div/>
           {/* Use grid (see https://mui.com/material-ui/react-grid/) to map elements */}
           <div container spacing={2}>
             {todos.map((el, index) => (
