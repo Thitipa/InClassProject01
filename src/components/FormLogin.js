@@ -10,7 +10,7 @@ import {
   Input,
   Label,
 } from "reactstrap";
-import barcode from "../images/image2.png";
+// import barcode from "../images/image2.png";
 
 class FormLogin extends Component {
   constructor(props) {
@@ -54,75 +54,62 @@ class FormLogin extends Component {
 
   render() {
     return (
-      <div className="row d-flex justify-content-end">
-        <div className="col-7">
-          <ModalBody>
-            <Form onSubmit={this.handleLogin} style={{ color: "#C5C5C5" }}>
-              <FormGroup>
-                <Label htmlFor="username">EMAIL OR PHONE NUMBER</Label>
-                <Input
-                  type="text"
-                  id="username"
-                  name="username"
-                  innerRef={(input) => (this.username = input)}
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label htmlFor="password">PASSWORD</Label>
-                <Input
-                  type="password"
-                  id="password"
-                  name="password"
-                  innerRef={(input) => (this.password = input)}
-                />
-                <a
-                  href="#"
-                  style={{ textDecoration: "none", color: "#0095D2" }}
-                >
-                  Forgot your password?
-                </a>
-              </FormGroup>
-              <Button
-                type="submit"
-                value="submit"
-                color="primary"
-                className="col-12"
-                style={{ backgroundColor: "#505CEA" }}
-              >
-                Login
-              </Button>
-              <span style={{ color: "#afb0b3" }}>Need an account? </span>
-              <a href="#" style={{ textDecoration: "none", color: "#0095D2" }}>
-                Register?
-              </a>
-            </Form>
-          </ModalBody>
-        </div>
-        <div className="col-5 d-flex align-item-center flex-column">
-          <div
-            className="d-flex justify-content-center"
-            style={{ marginBottom: "20px" }}
-          >
-            <img src={barcode} alt="Barcode" width="200px" />
+      <>
+        <ModalBody>
+          <div className="text-center">
+            <Typography
+              gutterBottom
+              variant="h5"
+              // component="div"
+              // className="col-7 d-flex justify-content-center"
+            >
+              Welcome back!
+            </Typography>
+            <p
+              style={{ color: "#C5C5C5" }}
+              // className="col-7 d-flex justify-content-center"
+            >
+              We're so excited to sleep again 😴
+            </p>
           </div>
-          <p
-            style={{ fontSize: "30px" }}
-            gutterBottom
-            variant="h5"
-            component="div"
-            className=" d-flex justify-content-center"
-          >
-            Unable to Login?
-          </p>
-          <p
-            className="d-flex justify-content-center"
-            style={{ textAlign: "center" }}
-          >
-            Listen to some music, relax yourself, and take a deep breath until
-            you can remember your password.
-          </p>
-        </div>
-      </div>
+          <Form onSubmit={this.handleLogin} style={{ color: "#C5C5C5" }}>
+            <FormGroup>
+              <Label htmlFor="username">EMAIL OR PHONE NUMBER</Label>
+              <Input
+                type="text"
+                id="username"
+                name="username"
+                innerRef={(input) => (this.username = input)}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label htmlFor="password">PASSWORD</Label>
+              <Input
+                type="password"
+                id="password"
+                name="password"
+                innerRef={(input) => (this.password = input)}
+              />
+              <a href="#" style={{ textDecoration: "none", color: "#0095D2" }}>
+                Forgot your password?
+              </a>
+            </FormGroup>
+            <Button
+              type="submit"
+              value="submit"
+              color="primary"
+              className="col-12"
+              style={{ backgroundColor: "#505CEA" }}
+            >
+              Login
+            </Button>
+            <span style={{ color: "#afb0b3" }}>Need an account? </span>
+            <a href="#" style={{ textDecoration: "none", color: "#0095D2" }}>
+              Register?
+            </a>
+          </Form>
+        </ModalBody>
+      </>
     );
   }
 }

@@ -7,7 +7,7 @@ function TipLogin() {
     <div>
       <Box
         className="d-flex justify-content-between"
-        sx={{ p: 2, px: 10, bgcolor: "white", color: "black" }}
+        sx={{ position:"fixed", width:"100%" , p: 2, px: 10, bgcolor: "white", color: "black" }}
       >
         <div> <img src={Dis} alt="discord" width={50}></img>Due Today, Do Tomorrow</div>
         <div><button
