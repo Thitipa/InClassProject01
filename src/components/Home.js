@@ -9,11 +9,10 @@ function Home() {
       className="d-flex align-items-center justify-content-center"
     >
       <Card
-        className="d-flex justify-content-center align-items-center"
-        style={{ backgroundColor: "white", margin: "5 auto" , width:"96%"}}
+        style={{ backgroundColor: "#F7F7F7", margin: "5 auto" , width:"96%"}}
       >
-        <CardBody className="d-flex justify-content-center align-items-center">
-          <CardTitle style={{fontSize:"40px"}}>What you need to do?</CardTitle>
+        <CardBody className="row">
+          <CardTitle className="d-flex align-items-center justify-content-center" style={{fontSize:"80px"}}>What you need to do?</CardTitle>
           <Todo/>
         </CardBody>
       </Card>

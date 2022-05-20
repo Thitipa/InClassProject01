@@ -23,7 +23,7 @@ const Todo = () => {
   
     return (
       <Container>
-        <Card minHeight="calc(100vh - 620px)" paddingY={4}>
+        <div minHeight="calc(100vh - 620px)" paddingY={4}>
           <NewTodo addTodo={addTodos} />
           <div/>
           {/* Use grid (see https://mui.com/material-ui/react-grid/) to map elements */}
@@ -39,7 +39,7 @@ const Todo = () => {
               </div>
             ))}
           </div>
-        </Card>
+        </div>
         {/* <Button onClick={deleteTodo}>Hello</Button> */}
       </Container>
     );

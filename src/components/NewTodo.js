@@ -1,42 +1,34 @@
-  import { Box, Fab, Stack, TextField, Typography } from "@mui/material";
-  import React, { useState } from "react";
-  import moment from "moment";
-  
-  const NewTodo = ({ addTodo }) => {
-    const [title, setTitle] = useState("");
-    const [desc, setDesc] = useState("");
-    return (
-      <div>
-        
-        <div display="flex" gap={2}>
-          <Stack gap={2} flex={1}>
-            <TextField
-              id="outlined-basic"
-              label=""
-              variant="outlined"
-              value={title}
-              onChange={(event) => setTitle(event.target.value)}
-            />
-            <button
-              aria-label="edit"
-              style={{}}
-              onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))}>add!</button>
-          </Stack>
-          <Stack justifyContent="flex-end">
-            {/* <Fab
-              color="secondary"
-              aria-label="edit"
-              onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))}
-            > */}
-              {/* <ChevronRight 
-              aria-label="edit"
-              onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))} /> */}
-            {/* </Fab> */}
-          </Stack>
-        </div>
+import { Input } from "reactstrap";
+import React, { useState } from "react";
+import moment from "moment";
+import Conclude from "./Conclusion";
+
+const NewTodo = ({ addTodo }) => {
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  return (
+    <div>
+      <div className="d-flex justify-content-center" style={{marginTop:"30px"}}>
+        <Input
+          // className=""
+          style={{ width: "500px" }}
+          // id="outlined-basic"
+          label="To do"
+          // variant="outlined"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <button
+          aria-label="edit"
+          style={{ border: "none" }}
+          onClick={() => addTodo(title, desc, moment().format("MMM Do YY"))}
+        >
+          add!
+        </button>
       </div>
-    );
-  };
-  
-  export default NewTodo;
-  
+      <Conclude />
+    </div>
+  );
+};
+
+export default NewTodo;
